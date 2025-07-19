@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <>
       <NavBar />
-      <main style={{ paddingTop: '80px' }}> {/* padding to avoid being hidden under nav */}
+      <main className="pt-[80px] max-w-7xl mx-auto px-4">
         <Outlet />
       </main>
     </>
