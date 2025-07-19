@@ -4,6 +4,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import MainLayout from "./layout/MainLayout";
 import './styles/theme.css';
+import React from 'react';
 
 function App() {
   return (

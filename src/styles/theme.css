@@ -15,7 +15,57 @@
     --transition-slow: 0.4s ease;
 
 
+    
+    .project-box {
+    background: rgba(var(--color-box), var(--glass-opacity));
+    backdrop-filter: var(--glass-blur);
+    color: var(--color-text);
+    border: 1px solid var(--color-muted);
+    transition: var(--transition-slow);
+    }
 
+    .project-box:hover {
+    box-shadow: 0 0 20px var(--color-accent);
+    filter: brightness(1.1);
+    }
+
+    .nav-glass {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(82, 60, 63, var(--glass-opacity)); /* fallback */
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--color-muted);
+    z-index: 1000;
+    }
+
+    .nav-logo {
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: bold;
+    }
+
+    .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    }
+
+    .nav-links a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+    color: var(--color-hover);
+    }
 
 
 }

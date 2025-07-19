@@ -1,15 +1,16 @@
-import Navbar from "../components/Navbar";
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
-function MainLayout() {
+const MainLayout = () => {
   return (
     <>
-      <Navbar />
-      <main style={{ padding: "20px" }}>
+      <NavBar />
+      <main style={{ paddingTop: '80px' }}> {/* padding to avoid being hidden under nav */}
         <Outlet />
       </main>
     </>
   );
-}
+};
 
 export default MainLayout;
