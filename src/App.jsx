@@ -3,7 +3,11 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import MainLayout from "./layout/MainLayout";
-import './styles/theme.css';
+import React from 'react';
+import About from "./pages/About";
+
+
+
 
 function App() {
   return (
@@ -11,6 +15,7 @@ function App() {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
         <Route path="portfolio" element={<Portfolio />} />
+        <Route path="/about" element={<About />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>
