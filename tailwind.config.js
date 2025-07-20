@@ -26,6 +26,20 @@ module.exports = {
     fadeIn: {
       '0%': { opacity: 0 },
       '100%': { opacity: 1 },
+      theme: {
+  extend: {
+    keyframes: {
+      wipeRight: {
+        '0%': { transform: 'translateX(-100%)' },
+        '100%': { transform: 'translateX(0)' },
+      }
+    },
+    animation: {
+      wipeRight: 'wipeRight 0.7s ease-in-out forwards',
+    }
+  }
+}
+
     },
   },
 }
