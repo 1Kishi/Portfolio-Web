@@ -36,7 +36,6 @@ export default function Home() {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
           </span>
 
-          {/* 🔄 Animated rotating text */}
           <span
             className={`px-3 py-1 rounded-full bg-green-600/10 border border-green-500 text-green-400 font-semibold text-xs tracking-wide shadow-sm group-hover:shadow-lg transition-all duration-700 ease-in-out`}
           >
@@ -47,8 +46,6 @@ export default function Home() {
 
           <span className="text-xs text-muted ml-1 animate-pulse">ⓘ</span>
         </div>
-
-        {/* Hover detail */}
         <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 text-center bg-white/80 dark:bg-black/70 text-xs px-3 py-2 rounded-lg shadow backdrop-blur">
           Otevřený pozicím na <strong>plný nebo zkrácený úvazek</strong> - <strong>remote</strong> nebo <strong>hybridně</strong><br />
         </div>

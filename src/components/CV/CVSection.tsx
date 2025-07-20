@@ -1,10 +1,11 @@
 import EducationCard from "./EducationCard";
 import WorkTimeline from "./WorkTimeline";
+import { motion } from "framer-motion";
 
 
 const educationData = [
   {
-    school: "Vyšší odborná škola, Sezimovo Ústí",
+    school: "Vyšší odborná škola a Střední škola, Sezimovo Ústí",
     field: "Informační technologie – správa sítí a programování",
     years: "2018 – 2022",
     completed: true,
@@ -36,10 +37,17 @@ export default function CVSection() {
           <EducationCard key={index} entry={entry} />
         ))}
       </div>
-
-      {/* 🔜 Work experience timeline will go here */}
       <WorkTimeline />
 
+        <section className="pt-12 space-y-4">
+          <h2 className="text-2xl font-bold text-black dark:text-white">Zájmy</h2>
+          <p className="text-sm text-neutral-800 dark:text-neutral-200">
+            Rád objevují nové věci a často zkouším různé koníčky. Od tvorby hudby přes vaření až po programování nebo kreslení (Pixel Art). Nejvíc mě baví věci, které propojují kreativitu s logikou. 
+            Ve hrách mě přitahují hlavně strategie a řešení problémů, protože mě baví přemýšlet v souvislostech. Umím být vážný, když je to potřeba, ale někdy věci dělám i s nadsázkou a úsměvem.
+          </p>
+        </section>
     </section>
+
+
   );
 }
