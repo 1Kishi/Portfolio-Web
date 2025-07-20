@@ -11,7 +11,7 @@ export default function About() {
   };
 
 return (
-  <main className="min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-white transition-colors py-12 px-4 flex items-center justify-center">
+  <main className="min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-white transition-colors duration-500 flex items-center justify-center py-12 px-4">
     <div className="max-w-4xl w-full px-6 py-10 rounded-xl bg-white/30 dark:bg-black/30 backdrop-blur-md border border-neutral-300 dark:border-neutral-700 shadow-lg hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 space-y-8 text-center">
 
       <div className="space-y-2">
