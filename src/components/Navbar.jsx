@@ -23,6 +23,7 @@ const Navbar = () => {
             <ul className="flex gap-6 text-sm font-medium text-neutral-800 dark:text-neutral-100 justify-self-center">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/portfolio">Portfolio</Link></li>
+              <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
 

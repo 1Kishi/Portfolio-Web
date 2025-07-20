@@ -18,13 +18,13 @@ export default function Home() {
   return (
     <section className="min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-white transition-colors duration-500 flex flex-col items-center justify-center space-y-8 py-12">
       <div className="max-w-3xl text-center space-y-6">
-        <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-softRose">
+        <h1 className="text-4xl sm:text-5xl font-bold text-black dark:text-white">
           Jacob Green
         </h1>
         <h2 className="text-xl sm:text-2xl font-semibold text-neutral-800 dark:text-neutral-100">
           Tester VR aplikací a softwaru z České republiky
         </h2>
-        <p className="text-base sm:text-lg text-black dark:text-mutedRose max-w-xl">
+        <p className="text-base sm:text-lg text-black dark:text-white max-w-xl">
           Vítejte na mém portfoliu. Najdete zde mé projekty, zkušenosti a další informace o tom, co dělám.
         </p>
       </div>
