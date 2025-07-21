@@ -11,12 +11,14 @@ export default function About() {
   };
 
 return (
-  <main className="min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-white transition-colors duration-500 flex items-center justify-center py-12 px-4">
-    <div className="max-w-4xl w-full px-6 py-10 rounded-xl bg-white/30 dark:bg-black/30 backdrop-blur-md border border-neutral-300 dark:border-neutral-700 shadow-lg hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 space-y-8 text-center">
+  <main className="min-h-screen text-black dark:text-white transition-colors duration-500 flex items-center justify-center py-12 px-4">
+
+    <div className="max-w-4xl w-full px-6 py-10 rounded-2xl bg-white/10 dark:bg-charcoal/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 space-y-8 text-center">
+
 
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">O mně</h1>
-        <p className="text-neutral-600 dark:text-neutral-300">Interaktivní životopis a moje cesta</p>
+        <p className="text-neutral-600 dark:text-neutral-300">Interaktivní životopis</p>
         <div className="flex items-center justify-center gap-3 text-sm">
           <a
             href="mailto:jacobworkgreen@gmail.com"
@@ -26,7 +28,7 @@ return (
           </a>
           <button
             onClick={handleCopy}
-            className="px-3 py-1 bg-neutral-200 dark:bg-neutral-700 rounded hover:bg-neutral-300 dark:hover:bg-neutral-600 transition"
+            className="px-4 py-1.5 rounded-md bg-white/20 dark:bg-white/5 border-2 border-white/30 dark:border-white/10 backdrop-blur-sm text-black dark:text-white hover:shadow-md transition-all duration-300"
           >
             {copied ? "Zkopírováno!" : "Kopírovat"}
           </button>

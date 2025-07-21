@@ -1,0 +1,1 @@
+/* Zde budou certifikace.. Možná plány spojené s nimi..? Badges, how far I am in getting them, etc. */

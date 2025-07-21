@@ -16,14 +16,14 @@ const educationData = [
     field: "Podniková informatika",
     years: "2022 – 2023",
     completed: false,
-    explanation: "Přerušeno – očekával jsem hlubší propojení ekonomiky a technologií. Reálně jsem nenašel výzvu ani dostatečné tempo."
+    explanation: "Přerušeno – očekával jsem hlubší propojení technologií s ekonomikou. Reálně jsem nenašel výzvu ani dostatečné tempo."
   },
   {
     school: "VŠPJ – Vysoká škola polytechnická Jihlava",
     field: "Aplikovaná informatika",
     years: "2023 – 2024",
     completed: false,
-    explanation: "Studium jsem opustil kvůli rodinné situaci a potřebě pracovat. Pečoval jsem o nemocnou matku."
+    explanation: "Studium jsem opustil kvůli rodinné situaci a potřebě pracovat."
   }
 ];
 
