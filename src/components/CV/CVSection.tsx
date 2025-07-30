@@ -46,6 +46,13 @@ export default function CVSection() {
             Ve hrách mě přitahují hlavně strategie a řešení problémů, protože mě baví přemýšlet v souvislostech. Umím být vážný, když je to potřeba, ale rád věci dělám i s nadsázkou a úsměvem.
           </p>
         </section>
+                                <a
+                        href="/cv-jacob-green.pdf"
+                        download
+                        className="inline-block mt-4 px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition"
+                      >
+                        Stáhnout životopis (PDF)
+                      </a>
     </section>
 
 

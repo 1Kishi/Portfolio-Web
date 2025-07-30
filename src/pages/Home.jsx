@@ -79,11 +79,16 @@ export default function Home() {
               >
                 {copied ? "Zkopírováno!" : "Kopírovat"}
               </button>
+
+
             </div>
+            
           </div>
 
           <CVSection />
+          
         </div>
+        
       </section>
 
     </main>
