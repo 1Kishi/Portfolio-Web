@@ -47,7 +47,7 @@ export default function CVSection() {
           </p>
         </section>
                                 <a
-                        href="/cv-jacob-green.pdf"
+                        href="/green-jacob_cv.pdf"
                         download
                         className="inline-block mt-4 px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition"
                       >
