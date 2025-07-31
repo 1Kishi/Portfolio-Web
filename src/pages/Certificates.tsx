@@ -1,17 +1,6 @@
 import { useState } from "react";
 import CertificateBadge from "../components/CV/CertificateBadge";
-
-const certificates = [
-  { name: "CompTIA Security+", status: "Planned", category: "Cybersecurity" },
-  { name: "OSCP (Offensive Security)", status: "Planned", category: "Cybersecurity" },
-  { name: "TryHackMe: Complete Path", status: "Planned", category: "Cybersecurity" },
-  { name: "HackTheBox Starting Point", status: "Planned", category: "Cybersecurity" },
-  { name: "Cisco CCNA", status: "Planned", category: "Network" },
-  { name: "Microsoft Certified: Front-End Web Developer Associate", status: "Planned", category: "Frontend" },
-  { name: "Meta Front-End Developer", status: "Planned", category: "Frontend" },
-  { name: "AWS Certified Developer Associate", status: "Planned", category: "Backend" },
-  { name: "Meta Back-End Developer", status: "Planned", category: "Backend" },
-];
+import { certificates } from "../data/certificates";
 
 const categories = ["All", "Cybersecurity", "Frontend", "Backend", "Network"];
 
@@ -51,7 +40,7 @@ export default function CertificateSection() {
         ))}
       </div>
       <div>
-        <p>Mimo tyto plánované certifikace se vzdělávám pomocí Udemy kurzů, vlastních projektů, Youtube, AI vysvětlování různých snippetů, struktur kódu a internetu (Především různá fórum).</p>
+        <p>Mimo tyto plánované certifikace se vzdělávám pomocí Udemy kurzů, vlastních projektů, Youtube, čtení cizího kódu, AI vysvětlování různých snippetů a internetu (Především různá fórum).</p>
       </div>
     </section>
   );

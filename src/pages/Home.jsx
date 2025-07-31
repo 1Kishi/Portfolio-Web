@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import CVSection from '../components/CV/CVSection';
 import ScrollNav from "../components/ScrollNav";
+import { certificates } from "../data/certificates";
+import CertificateBadge from "../components/CV/CertificateBadge";
+import CertificateSection from './Certificates';
+import { projects } from "../data/projects";
+
+
 
 export default function Home() {
   const statusMessages = ['Scháním spolupráci', 'Remote vítán'];
@@ -119,12 +125,45 @@ export default function Home() {
           </div>
 
           <CVSection />
+          <CertificateSection />
+
+
 
           
         </div>
-        
       </section>
+
+      <section id="portfolio" className="min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-4xl w-full px-6 py-10 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 space-y-8 text-center">
+          <div className="pt-12 space-y-6">
+            <h2 className="text-2xl font-bold text-black dark:text-white">Ukázka posledních dvou projektů</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.slice(0, 2).map((project) => (
+                <div key={project.slug} className="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 shadow-lg">
+                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
+                  <p className="text-sm text-neutral-300 mt-2">{project.short}</p>
+                  <a
+                    href={`/deep-dive/${project.slug}`}
+                    className="mt-4 inline-block text-sm text-pink-400 hover:underline"
+                  >
+                    Detail projektu
+                  </a>
+                </div>
+              ))}
+            </div>
+            <a
+              href="/portfolio"
+              className="inline-block mt-4 px-4 py-2 rounded-md text-sm bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 transition text-black dark:text-white"
+            >
+              Zobrazit všechny
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
       <ScrollNav />
+      
     </main>
   );
 }

@@ -1,27 +1,7 @@
 import { useState } from "react";
+import { projects } from "../data/projects";
 
-const projects = [
-  {
-    slug: "portfolio-website",
-    title: "Portfolio Website",
-    category: "Frontend",
-    tech: ["React", "Tailwind", "Vite"],
-    cover: "Portfolio",
-    tags: ["React", "Tailwind", "Vite"],
-    image: "/images/portfolio_website-screenshot.png",
-    short: "Portfolio website with animations, filters, and deep dive pages."
-  },
-  {
-    slug: "network-config",
-    title: "Network Config",
-    category: "Networking",
-    tech: ["Network", "Routing", "LAN"],
-    cover: "Networking",
-    tags: ["Network", "Routing", "LAN"],
-    image: "/network-screenshot.png",
-    short: "Network App which configures ports."
-  },
-];
+
 
 const allTags = ["All", ...Array.from(new Set(projects.flatMap((p) => p.tags)))];
 
