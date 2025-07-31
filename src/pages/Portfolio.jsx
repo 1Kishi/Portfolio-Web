@@ -13,7 +13,7 @@ export default function Portfolio() {
 
       <section className="max-w-5xl mx-auto space-y-6 text-center">
         <h1 className="text-4xl font-bold">Portfolio</h1>
-        <p className="text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
+        <p className=" text-neutral-800 dark:text-neutral-300 max-w-3xl mx-auto">
           Zde naleznete mé projekty. Jak byly tvořeny, popis, fotky a odkaz na GitHub s projektem.
         </p>
       </section>
@@ -72,7 +72,7 @@ export default function Portfolio() {
                   </div>
 
                   <div className="p-6 space-y-2">
-                    <p className="text-sm text-neutral-300">{project.short}</p>
+                    <p className="text-sm text-neutral-800 dark:text-neutral-300">{project.short}</p>
                     <p className="text-xs text-neutral-500">{project.tech.join(", ")}</p>
                   </div>
                 </a>

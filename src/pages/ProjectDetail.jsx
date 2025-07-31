@@ -123,7 +123,7 @@ return (
                 className="rounded-xl border border-white/10 shadow-md"
               />
               {project.imageCaptions?.[idx] && (
-                <p className="text-sm text-neutral-400 text-center">{project.imageCaptions[idx]}</p>
+                <p className="text-sm text-neutral-800 dark:text-neutral-300 text-center">{project.imageCaptions[idx]}</p>
               )}
             </div>
           ))}
@@ -132,7 +132,7 @@ return (
 
       {project.PhotosAdditionalInfo && (
         <div className="space-y-4">
-          <div className="space-y-1 text-sm italic text-neutral-500 dark:text-neutral-400">
+          <div className="space-y-1 text-sm italic text-neutral-600 dark:text-neutral-300">
             {project.PhotosAdditionalInfo.map((line, index) => (
               <p key={index}>{line}</p>
             ))}
