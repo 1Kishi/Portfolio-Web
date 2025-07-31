@@ -7,7 +7,7 @@ The site supports light and dark themes automatically and includes project filte
 
 ## Tech Stack
 
-- React
+- React (+ A little bit of TypeScript inline annotations)
 - Tailwind CSS
 - Vite
 
