@@ -8,7 +8,7 @@ import './index.css';
 const html = document.documentElement;
 const storedTheme = localStorage.getItem('theme');
 
-if (storedTheme === 'dark') {
+if (storedTheme === 'dark' || (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   html.classList.add('dark');
 } else {
   html.classList.remove('dark');
