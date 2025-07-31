@@ -7,7 +7,7 @@ import CursorGlow from "../components/CursorGlow";
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#666464] via-[#dfadc0] to-[#ebd391] dark:from-[#05011f] dark:via-[#3b383d] dark:to-[#1f1f1f] text-white transition-colors duration-500">
+    <div className="min-h-screen bg-gradient-to-br from-[#2e2d2d] via-[#dfadc0] to-[#ebd391] dark:from-[#05011f] dark:via-[#3b383d] dark:to-[#1f1f1f] text-white transition-colors duration-500">
 
       <NavBar />
       <main className="pt-[80px] max-w-7xl mx-auto px-4">
