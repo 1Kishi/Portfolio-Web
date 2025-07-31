@@ -150,7 +150,7 @@ export default function Home() {
                 <div className="pt-4">
                   <a
                     href={`/deep-dive/${project.slug}`}
-                    className="inline-block text-sm text-pink-400 hover:underline"
+                    className="inline-block text-sm text-neutral-800 dark:text-pink-200 hover:underline"
                   >
                     Detail projektu
                   </a>

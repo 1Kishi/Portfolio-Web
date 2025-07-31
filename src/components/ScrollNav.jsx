@@ -37,8 +37,8 @@ export default function ScrollNav() {
           href={`#${id}`}
           className={`text-sm font-medium px-9 py-2 rounded-full transition-colors duration-300 ${
             active === id
-              ? "bg-pink-600 text-white"
-              : "text-neutral-500 hover:text-pink-400"
+              ? "bg-pink-600 text-neutral-100"
+              : "text-neutral-100 hover:text-pink-400"
           }`}
         >
           {label}
