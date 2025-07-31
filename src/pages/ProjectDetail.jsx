@@ -19,13 +19,14 @@ const projectData = {
     "VSCode nepodporoval správně PostCSS syntax > neukazoval chyby.",
     "Globální npx přestal fungovat > reinstalace Node.js a oprava CLI linků.",
     "Zobrazovalo se overlay tlačítko i při hoveru na jiné části > špatná hierarchie.",
-    "Glow efekt na kartách projektů nefungoval správně > rozpadával se."
+    "Glow efekt na kartách projektů nefungoval správně > rozpadával se.",
+    "Měl jsem problémy s deploymentem na Vercel, neuvědomil jsem si, že je Vercel case sensitive při importaci souborů + Jsem zapomněl přidat fallback pro SPA > Způsobeno neznalostí. "
   ],
   reflection: [
     "Začátek projektu byl zmatený - hlavně s konfigurací Tailwindu. Bylo těžké odhalit proč některé třídy nefungují. Nakonec jsem zjistil, že šlo o tree-shaking a musel jsem je přidat na safelist nebo testovat natvrdo.",
     "Nastavení tmavého/světlého režimu bylo překvapivě jednoduché díky dark: prefixu v Tailwindu a detekci systémového nastavení přes useEffect.",
     "Design se ladil delší dobu. Glow efekty jsem ladil ručně, dělal testy s blur, mix-blend, z-index a pozicí elementů.",
-    "Původně jsem neplánoval přidávat filtr projektů podle technologií, ale nápad přišel v průběhu a myslím si, že výrazně zlepšil UX."
+    "Původně jsem neplánoval přidávat filtr projektů podle technologií, ale nápad přišel v průběhu a myslím si, že výrazně zlepší do budoucna UX."
   ],
   highlights: [
     "Všechno je napsané od nuly: čistý React + Tailwind, bez šablon nebo UI knihoven.",
