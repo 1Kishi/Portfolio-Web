@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CVSection from "../components/CV/CVSection";
 import CertificateBadge from "../components/CV/CertificateBadge";
+import CertificateSection from "./Certificates";
 
 export default function About() {
   const [copied, setCopied] = useState(false);
@@ -38,21 +39,7 @@ return (
 
       <CVSection />
 
-
-      <section className="pt-12 space-y-4">
-        <h2 className="text-2xl font-bold text-black dark:text-white">Plánované certifikace a vzdělávání</h2>
-        <p className="text-sm text-neutral-800 dark:text-neutral-200">
-          Mým cílem je zlepšit své schopnosti v oblasti kyberbezpečnosti, sítí a programování. Přístup ke kurzům nebo certifikacím je v tuto chvíli limitován hlavně financemi a omezenými znalostmi na kterých pracuji každý den.
-        </p>
-
-        <div className="space-y-3">
-          <CertificateBadge name="CompTIA Security+" status="Planned" />
-          <CertificateBadge name="Cisco CCNA" status="Planned" />
-          <CertificateBadge name="OSCP (Offensive Security)" status="Planned" />
-          <CertificateBadge name="TryHackMe: Complete Path" status="Planned" />
-          <CertificateBadge name="HackTheBox Starting Point" status="Planned" />
-        </div>
-      </section>
+      <CertificateSection />
 
     </div>
   </main>

@@ -1,23 +1,7 @@
 import { useState } from "react";
+import { projects } from "../data/projects";
 
-const projects = [
-  {
-    slug: "portfolio-website",
-    title: "Portfolio Website",
-    category: "Frontend",
-    tech: ["React", "Tailwind", "Vite"],
-    cover: "Portfolio",
-    tags: ["React", "Tailwind", "Vite"],
-  },
-  {
-    slug: "network-config",
-    title: "Network Config",
-    category: "Networking",
-    tech: ["Network", "Routing", "LAN"],
-    cover: "Networking",
-    tags: ["Network", "Routing", "LAN"],
-  },
-];
+
 
 const allTags = ["All", ...Array.from(new Set(projects.flatMap((p) => p.tags)))];
 
@@ -25,7 +9,7 @@ export default function Portfolio() {
   const [selectedTag, setSelectedTag] = useState("All");
 
   return (
-    <main className="text-black dark:text-white transition-colors duration-500 px-4 py-20 space-y-24">
+    <main id="portfolio" className="text-black dark:text-white transition-colors duration-500 px-4 py-20 space-y-24">
 
       <section className="max-w-5xl mx-auto space-y-6 text-center">
         <h1 className="text-4xl font-bold">Portfolio</h1>
@@ -63,28 +47,38 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10">
+      </section>
+              <div className="grid md:grid-cols-2 gap-10">
           {projects
             .filter((project) =>
               selectedTag === "All" ? true : project.tags.includes(selectedTag)
             )
             .map((project) => (
-              <a
-                key={project.slug}
-                href={`/deep-dive/${project.slug}`}
-                className="rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl hover:shadow-[0_0_12px_#ff69f0] overflow-hidden transition-all duration-300 group"
-              >
-                <div className="h-48 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] dark:from-[#101010] dark:to-[#1f1f1f] flex items-center justify-center text-3xl font-bold text-white group-hover:text-pink-400 transition">
-                  {project.cover}
-                </div>
-                <div className="p-6 space-y-2">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-sm text-neutral-400">{project.tech.join(", ")}</p>
-                </div>
-              </a>
+              <div key={project.slug} className="relative group rounded-2xl project-glow">
+                <a
+                  href={`/deep-dive/${project.slug}`}
+                  className="relative z-10 block rounded-2xl overflow-hidden bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 transition-all duration-300"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+                    <h3 className="absolute bottom-4 left-4 text-xl font-semibold text-white transition duration-300 group-hover:text-pink-400 drop-shadow-[0_0_4px_rgba(255,105,240,0.6)]">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  <div className="p-6 space-y-2">
+                    <p className="text-sm text-neutral-300">{project.short}</p>
+                    <p className="text-xs text-neutral-500">{project.tech.join(", ")}</p>
+                  </div>
+                </a>
+              </div>
             ))}
         </div>
-      </section>
 
     </main>
   );

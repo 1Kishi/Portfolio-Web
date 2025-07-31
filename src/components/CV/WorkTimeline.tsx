@@ -21,7 +21,7 @@ export default function WorkTimeline() {
 
           <div>
             <h3 className="text-lg font-semibold text-black dark:text-white">Software & VR Tester</h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-300 italic">Virtual Lab • Srpen 2023 – současnost</p>
+            <p className="text-sm text-neutral-600 dark:text-neutral-300 italic">Virtual Lab • Srpen 2023 - současnost</p>
             <p className="mt-2 text-sm text-neutral-800 dark:text-neutral-200">
               <p className="mt-2 text-sm text-neutral-800 dark:text-neutral-200 space-y-2">
                 <span>
@@ -33,13 +33,13 @@ export default function WorkTimeline() {
                 </span>
                 <br />
                 <span>
-                  Současně vedu dva částečně úvazkové testery - přesto většinu klíčových nebo nejkomplexnějších úkolů řeším osobně.
+                  Současně vedu dva testery na částečný úvazek, přesto většinu klíčových nebo nejkomplexnějších úkolů řeším sám.
                 </span>
               </p>
             </p>
 
             <div className="flex flex-wrap gap-2 mt-3">
-              {["C#", "QA", "UX", "Bug Slayer", "Automation", "Small Team Coordination", "Client Communication"].map((tag) => (
+              {["C#", "QA", "UX", "Bug Slayer", "Small Team Coordination", "Client Communication"].map((tag) => (
                 <span
                   key={tag}
                   className="px-2 py-0.5 text-xs bg-neutral-200 dark:bg-neutral-700 text-black dark:text-white rounded-full"

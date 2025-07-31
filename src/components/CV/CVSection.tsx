@@ -6,22 +6,22 @@ import { motion } from "framer-motion";
 const educationData = [
   {
     school: "Vyšší odborná škola a Střední škola, Sezimovo Ústí",
-    field: "Informační technologie – správa sítí a programování",
-    years: "2018 – 2022",
+    field: "Informační technologie - správa sítí a programování",
+    years: "2018 - 2022",
     completed: true,
     explanation: "Studium jsem úspěšně dokončil. Zaměřeno na praktickou správu sítí a základní programování."
   },
   {
     school: "Jihočeská univerzita v Českých Budějovicích",
     field: "Podniková informatika",
-    years: "2022 – 2023",
+    years: "2022 - 2023",
     completed: false,
-    explanation: "Přerušeno – očekával jsem hlubší propojení technologií s ekonomikou. Reálně jsem nenašel výzvu ani dostatečné tempo."
+    explanation: "Přerušeno - očekával jsem hlubší propojení technologií s ekonomikou. Reálně jsem nenašel výzvu ani dostatečné tempo."
   },
   {
-    school: "VŠPJ – Vysoká škola polytechnická Jihlava",
+    school: "VŠPJ - Vysoká škola polytechnická Jihlava",
     field: "Aplikovaná informatika",
-    years: "2023 – 2024",
+    years: "2023 - 2024",
     completed: false,
     explanation: "Studium jsem opustil kvůli rodinné situaci a potřebě pracovat."
   }
@@ -46,13 +46,13 @@ export default function CVSection() {
             Ve hrách mě přitahují hlavně strategie a řešení problémů, protože mě baví přemýšlet v souvislostech. Umím být vážný, když je to potřeba, ale rád věci dělám i s nadsázkou a úsměvem.
           </p>
         </section>
-                                <a
-                        href="/green-jacob_cv.pdf"
-                        download
-                        className="inline-block mt-4 px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition"
-                      >
-                        Stáhnout životopis (PDF)
-                      </a>
+              <a
+                href="/green-jacob_cv.pdf"
+                download
+                className="inline-block mt-4 px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition"
+              >
+                Stáhnout životopis (PDF)
+              </a>
     </section>
 
 

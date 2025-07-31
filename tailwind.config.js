@@ -23,6 +23,7 @@ module.exports = {
   safelist: ['text-neonPink', 'bg-black'],
   plugins: [],
   extend: {
+  boxShadow: ['group-hover'],
   animation: {
     fadeIn: 'fadeIn 0.7s ease-in-out forwards',
   },
@@ -40,9 +41,11 @@ module.exports = {
     },
     animation: {
       wipeRight: 'wipeRight 0.7s ease-in-out forwards',
+      
     }
   }
 }
+
 
     },
   },
