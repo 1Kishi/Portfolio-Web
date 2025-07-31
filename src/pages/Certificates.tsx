@@ -15,7 +15,7 @@ export default function CertificateSection() {
     <section className="pt-12 space-y-6">
       <h2 className="text-2xl font-bold text-black dark:text-white">Plánované certifikace a vzdělávání</h2>
       <p className="text-sm text-neutral-800 dark:text-neutral-200">
-        Mým cílem je zlepšit své schopnosti v oblasti kyberbezpečnosti, vývoje a sítí. Přístup ke kurzům nebo certifikacím je v tuto chvíli limitován hlavně financemi — ale motivace a odhodlání si nacházím každý den.
+        Mým cílem je zlepšit své schopnosti v oblasti kyberbezpečnosti, vývoje a sítí. Přístup ke kurzům nebo certifikacím je v tuto chvíli limitován hlavně financemi.
       </p>
 
       <div className="flex flex-wrap gap-2">
