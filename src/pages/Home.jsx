@@ -75,16 +75,16 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col items-center gap-6">
-                    <img
-                      src="https://github-readme-stats.vercel.app/api?username=1kishi&show_icons=true&theme=tokyonight&hide_border=true&cache_bust=1"
-                      alt="GitHub Stats"
-                      className="rounded-xl shadow"
-                    />
-                    <img
-                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=1kishi&layout=compact&theme=tokyonight&hide_border=true&cache_bust=1"
-                      alt="Top Languages"
-                      className="rounded-xl shadow"
-                    />
+                  <img
+                    src="https://github-readme-stats-gamma-virid.vercel.app/api?username=1kishi&show_icons=true&theme=tokyonight&hide_border=true"
+                    alt="GitHub Stats"
+                    className="rounded-xl shadow"
+                  />
+                  <img
+                    src="https://github-readme-stats-gamma-virid.vercel.app/api/top-langs/?username=1kishi&layout=compact&theme=tokyonight&hide_border=true"
+                    alt="Top Languages"
+                    className="rounded-xl shadow"
+                  />
                 </div>
 
                 <div>
