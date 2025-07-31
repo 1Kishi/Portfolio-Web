@@ -140,8 +140,8 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               {projects.slice(0, 2).map((project) => (
                 <div key={project.slug} className="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 shadow-lg">
-                  <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-                  <p className="text-sm text-neutral-300 mt-2">{project.short}</p>
+                  <h3 className="text-xl font-semibold text-neutral-900 dark:text-white">{project.title}</h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2">{project.short}</p>
                   <a
                     href={`/deep-dive/${project.slug}`}
                     className="mt-4 inline-block text-sm text-pink-400 hover:underline"
