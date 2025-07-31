@@ -137,20 +137,27 @@ export default function Home() {
         <div className="max-w-4xl w-full px-6 py-10 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 space-y-8 text-center">
           <div className="pt-12 space-y-6">
             <h2 className="text-2xl font-bold text-black dark:text-white">Ukázka posledních dvou projektů</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {projects.slice(0, 2).map((project) => (
-                <div key={project.slug} className="bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 shadow-lg">
+          <div className="grid md:grid-cols-2 gap-6 items-stretch">
+            {projects.slice(0, 2).map((project) => (
+              <div
+                key={project.slug}
+                className="flex flex-col justify-between h-full bg-white/10 p-6 rounded-xl backdrop-blur-md border border-white/20 shadow-lg"
+              >
+                <div className="flex-grow">
                   <h3 className="text-xl font-semibold text-neutral-900 dark:text-white">{project.title}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-300 mt-2">{project.short}</p>
+                </div>
+                <div className="pt-4">
                   <a
                     href={`/deep-dive/${project.slug}`}
-                    className="mt-4 inline-block text-sm text-pink-400 hover:underline"
+                    className="inline-block text-sm text-pink-400 hover:underline"
                   >
                     Detail projektu
                   </a>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
             <a
               href="/portfolio"
               className="inline-block mt-4 px-4 py-2 rounded-md text-sm bg-white/10 hover:bg-white/20 dark:bg-white/5 dark:hover:bg-white/10 transition text-black dark:text-white"
