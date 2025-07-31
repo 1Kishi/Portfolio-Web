@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
+
 const html = document.documentElement;
 const storedTheme = localStorage.getItem('theme');
 

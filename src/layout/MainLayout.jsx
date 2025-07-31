@@ -1,6 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import ScrollNav from "../components/ScrollNav";
+import CursorGlow from "../components/CursorGlow";
+
 
 const MainLayout = () => {
   return (
@@ -10,6 +13,7 @@ const MainLayout = () => {
       <main className="pt-[80px] max-w-7xl mx-auto px-4">
         <Outlet />
       </main>
+      <CursorGlow />
     </div>
   );
 };

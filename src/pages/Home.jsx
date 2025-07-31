@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import CVSection from '../components/CV/CVSection';
+import ScrollNav from "../components/ScrollNav";
 
 export default function Home() {
   const statusMessages = ['Scháním spolupráci', 'Remote vítán'];
@@ -33,7 +34,7 @@ export default function Home() {
               Tester VR aplikací a softwaru z České republiky
             </h2>
             <p className="text-base sm:text-lg text-black dark:text-white max-w-xl mx-auto">
-              Vítejte na mém portfoliu. Najdete zde mé projekty, zkušenosti a další informace o tom na jakých projektech pracuji a jaké jsou mé schopnosti, nebo budoucí
+              Vítejte na mém portfoliu. Najdete zde mé projekty, zkušenosti a další informace o tom na jakých projektech pracuji a jaké jsou mé schopnosti, nebo mé budoucí plány.
             </p>
           </div>
 
@@ -55,9 +56,41 @@ export default function Home() {
 
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 text-center bg-white/80 dark:bg-black/70 text-xs px-3 py-2 rounded-lg shadow backdrop-blur">
               Otevřený pozicím na <strong>plný nebo zkrácený úvazek</strong> – <strong>remote</strong> nebo <strong>hybridně</strong>
+              
             </div>
+
+
           </div>
+            <div>
+              <section className="pt-12 space-y-8 text-center">
+                <h2 className="text-2xl font-bold text-black dark:text-white">GitHub Statistiky</h2>
+                <p className="text-sm text-neutral-800 dark:text-neutral-200 max-w-2xl mx-auto">
+                  Zde jsou mé veřejně dostupné GitHub statistiky - aktivita, oblíbené jazyky a obecná přítomnost v open-source projektech.
+                </p>
+
+                <div className="flex flex-col items-center gap-6">
+                    <img
+                      src="https://github-readme-stats.vercel.app/api?username=1kishi&show_icons=true&theme=tokyonight&hide_border=true"
+                      alt="GitHub Stats"
+                      className="rounded-xl shadow"
+                    />
+                    <img
+                      src="https://github-readme-stats.vercel.app/api/top-langs/?username=1kishi&layout=compact&theme=tokyonight&hide_border=true"
+                      alt="Top Languages"
+                      className="rounded-xl shadow"
+                    />
+                </div>
+
+                <div>
+                  <p>
+                    Bohužel jsou mé statistiky zatím nízké, jsem ale teprve na začátku své cesty. Git se aktivně učím pracuji na svých vlastních projektech. Když mě nějaký open-source projekt zaujme, snažím se ho aspoň pročíst a zorientovat se v něm. Pochopit proč lidi volí cestu a postup který volí a celkově se to snažit tlačit a posunout aspoň o trochu dál.
+                  </p>
+                </div>
+              </section>
+
+            </div>
         </div>
+        
       </section>
 
       <section id="about" className="min-h-screen flex items-center justify-center px-4">
@@ -91,7 +124,7 @@ export default function Home() {
         </div>
         
       </section>
-
+      <ScrollNav />
     </main>
   );
 }
