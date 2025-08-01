@@ -30,7 +30,7 @@ export default function ScrollNav() {
   }, []);
 
   return (
-    <nav className="fixed top-1/2 left-6 transform -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50">
+    <nav className="fixed top-1/2 left-6 transform -translate-y-1/2 hidden lg:flex  flex-col gap-4 z-50">
       {sections.map(({ id, label }) => (
         <a
           key={id}

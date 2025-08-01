@@ -57,7 +57,7 @@ export default function Portfolio() {
               <div key={project.slug} className="relative group rounded-2xl project-glow">
                 <a
                   href={`/deep-dive/${project.slug}`}
-                  className="relative z-10 block rounded-2xl overflow-hidden bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 transition-all duration-300"
+                  className="relative z-10 block rounded-2xl overflow-hidden bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 transition-all duration-300 h-full"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img

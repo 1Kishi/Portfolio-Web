@@ -7,13 +7,13 @@ const Navbar = () => {
   return (
     <nav className="w-full px-4 py-3 bg-white/60 dark:bg-[#141414]/60 backdrop-blur-xl border-b-2 border-white/40 dark:border-white/10 text-black dark:text-white shadow-md hover:shadow-[0_0_12px_#ff69f0] transition-all duration-300 ease-in-out fixed top-0 z-50">
 
-      <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
         
         <Link to="/" className="text-neutral-800 dark:text-neutral-100 font-bold text-lg">
           Jacob Green
         </Link>
 
-        <ul className="flex gap-6 text-sm font-medium text-neutral-800 dark:text-neutral-100 justify-self-center">
+        <ul className="hidden md:flex gap-6 text-sm font-medium text-neutral-800 dark:text-neutral-100 justify-center flex-grow">
           <li><Link to="/">Domov</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/about">O mně</Link></li>
