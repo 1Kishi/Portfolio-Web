@@ -9,12 +9,12 @@ export const projects = [
     short: "Portfolio web s animacemi, filterem, a deep dive stránkami.",
   },
   {
-    slug: "network-config",
-    title: "Network Config",
-    category: "Networking",
-    tech: ["Network", "Routing", "LAN"],
-    tags: ["Network", "Routing", "LAN"],
+    slug: "mini-network-threat-analyzer",
+    title: "Mini Network Threat Analyzer",
+    category: "Cybersecurity",
+    tech: ["React", "Tailwind", "JavaScript"],
+    tags: ["React", "Tailwind","Cybersecurity", "Network", "LAN"],
     image: "/network-screenshot.png",
-    short: "Network App which configures ports.",
+    short: "Web-based tool that simulates early-stage threat analysis by inspecting network traffic logs.",
   },
 ];
