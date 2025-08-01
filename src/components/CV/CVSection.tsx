@@ -43,7 +43,7 @@ const educationDataRaw = {
       explanation: "Left after finding the connection between tech and economics too shallow. The pace and challenge were not sufficient."
     },
     {
-      school: "Polytechnic University Jihlava (VŠPJ)",
+      school: "VŠPJ - Vysoká škola polytechnická Jihlava",
       field: "Applied Informatics",
       years: "2023 - 2024",
       completed: false,
