@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
-
-const sections = [
-  { id: "intro", label: "Domů" },
-  { id: "about", label: "O mně" },
-  { id: "portfolio", label: "Portfolio" },
-];
+import { useEffect, useState, useMemo } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function ScrollNav() {
+  const { lang, t } = useLanguage();
   const [active, setActive] = useState("intro");
+
+  const sections = useMemo(() => [
+    { id: "intro", label: t("nav_home") },
+    { id: "about", label: t("nav_about") },
+    { id: "portfolio", label: t("nav_portfolio") },
+  ], [lang]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,10 +29,10 @@ export default function ScrollNav() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [sections]);
 
   return (
-    <nav className="fixed top-1/2 left-6 transform -translate-y-1/2 hidden lg:flex  flex-col gap-4 z-50">
+    <nav className="fixed top-1/2 left-6 transform -translate-y-1/2 hidden lg:flex flex-col gap-4 z-50">
       {sections.map(({ id, label }) => (
         <a
           key={id}

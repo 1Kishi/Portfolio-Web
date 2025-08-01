@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useLanguage } from "../../context/LanguageContext";
 
 interface EducationEntry {
   school: string;
@@ -11,6 +11,7 @@ interface EducationEntry {
 
 export default function EducationCard({ entry }: { entry: EducationEntry }) {
   const [expanded, setExpanded] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div
@@ -29,7 +30,7 @@ export default function EducationCard({ entry }: { entry: EducationEntry }) {
         <div className="mt-3 text-sm text-neutral-900 dark:text-neutral-100 transition-all duration-300">
           <p>{entry.explanation}</p>
           <p className="mt-1 italic text-xs text-neutral-500">
-            {entry.completed ? "Studium dokončeno ✔" : "Nedokončeno ✘"}
+            {entry.completed ? t('education_completed') : t('education_not_completed')}
           </p>
         </div>
       )}
