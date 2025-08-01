@@ -26,7 +26,9 @@ const projectData = {
       "Začátek projektu byl zmatený - hlavně s konfigurací Tailwindu. Bylo těžké odhalit proč některé třídy nefungují. Nakonec jsem zjistil, že šlo o tree-shaking a musel jsem je přidat na safelist nebo testovat natvrdo.",
       "Nastavení tmavého/světlého režimu bylo překvapivě jednoduché díky dark: prefixu v Tailwindu a detekci systémového nastavení přes useEffect.",
       "Design se ladil delší dobu. Glow efekty jsem ladil ručně, dělal testy s blur, mix-blend, z-index a pozicí elementů.",
-      "Původně jsem neplánoval přidávat filtr projektů podle technologií, ale nápad přišel v průběhu a myslím si, že výrazně zlepší do budoucna UX."
+      "Rozhodl jsem se pro přidání všeho contentu na hlavní stránku, ale přesto zanechání navigace na jiné stránky. Někomu může vyhovovat mít na jedné stránce jen jeden předmět pozornosti, někdo může mít rád, že tam má vše a jen sjíždí nahoru a dolů.",
+      "Původně jsem neplánoval přidávat filtr projektů podle technologií, ale nápad přišel v průběhu a myslím si, že výrazně zlepší do budoucna UX.",
+      "Pozdní přidání plné responzivity > po původním 'dokončení' jsem zjistil, že navigace a projekty nefungují dobře na mobilech. Opraveno později pomocí skrytí navigace, která je bezpředmětná na této stránce pro mobilních zařízení."
     ],
     highlights: [
       "Všechno je napsané od nuly: čistý React + Tailwind, bez šablon nebo UI knihoven.",
