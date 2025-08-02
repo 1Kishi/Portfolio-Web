@@ -196,8 +196,8 @@ const projectData = {
       ]
     },
     challenges: {
-      cz: ["Dummy for now."],
-      en: ["Dummy for now."]
+      cz: ["Opět jsem narazil na chybu s Tailwind CSS. Po 90 hodinách práce na webu jsem si už nepamatoval, jak jsem podobný problém řešil dříve. Tentokrát jsem ho vyřešil do 20 minut > upravil jsem package.json, downgradoval verzi Tailwindu a vše začalo fungovat. Zjistil jsem, o jaké změny tím přicházím, ale pro velikost a rozsah projektu to nebyl problém. Rozhodl jsem se pokračovat dál, protože stabilita a čas byly důležitější."],
+      en: ["I ran into a Tailwind CSS error again. After 90 hours of working on the site, I no longer remembered how I had solved a similar issue earlier. This time, I resolved it in 20 minutes > I edited the package.json, downgraded the Tailwind version, and everything started working. I looked into what features I'd be missing, but for the size and scope of the project, it wasn't an issue. I chose to continue because stability and time were more important."]
     },
           snippets: {
         cz: [{ title: "...", code: "..." }],
