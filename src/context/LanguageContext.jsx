@@ -92,7 +92,7 @@ const translations = {
     home_show_all: "View All",
     btn_copy: "Copy",
     nav_home: "Home",
-    nav_about: "About",
+    nav_about: "About me",
     nav_portfolio: "Portfolio",
     work_title: "Work Experience",
     work_position: "Software & VR Tester",
