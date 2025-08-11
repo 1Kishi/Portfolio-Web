@@ -71,6 +71,15 @@ const translations = {
     cert_closing: "Mimo tyto plánované certifikace se vzdělávám pomocí kurzů, vlastních projektů, Youtube, čtení cizího kódu, AI vysvětlování různých snippetů a internetu (Především různá fórum).",
     cert_category_cybersecurity: "Kyberbezpečnost",
     cert_category_network: "Sítě",
+    first_steps: "První kroky",
+    finishing: "Dokončení",
+    reasoning: "Odůvodnění",
+    snippets: "Snippets",
+    view_demo: "Otevřít demo",
+    show_code: "Zobrazit kód",
+    hide_code: "Skrýt kód",
+    view_full: "Zobrazit detail",
+    close: "Zavřít",
 
 
 
@@ -147,7 +156,15 @@ const translations = {
     cert_closing: "In addition to these planned certifications, I am learning through courses, personal projects, YouTube, reading other people's code, AI explanations of various snippets, and the internet (mainly different forums).",
     cert_category_cybersecurity: "Cybersecurity",
     cert_category_network: "Network",
-
+    first_steps: "First Steps",
+    finishing: "Finishing",
+    reasoning: "Reasoning",
+    snippets: "Snippets",
+    view_demo: "Open Live Demo",
+    show_code: "Show code",
+    hide_code: "Hide code",
+    view_full: "View full", 
+    close: "Close",
 
 
 

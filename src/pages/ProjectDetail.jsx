@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
+import Lightbox from "../components/Lightbox";
 import { useLanguage } from "../context/LanguageContext";
+
 
 const projectData = {
   "portfolio-website": {
@@ -56,7 +59,7 @@ const projectData = {
       "Rozhodl jsem se pro přidání všeho contentu na hlavní stránku, ale přesto zanechání navigace na jiné stránky. Někomu může vyhovovat mít na jedné stránce jen jeden předmět pozornosti, někdo může mít rád, že tam má vše a jen sjíždí nahoru a dolů.",
       "Původně jsem neplánoval přidávat filtr projektů podle technologií, ale nápad přišel v průběhu a myslím si, že výrazně zlepší do budoucna UX.",
       "Pozdní přidání plné responzivity > po původním 'dokončení' jsem zjistil, že navigace a projekty nefungují dobře na mobilech. Opraveno později pomocí skrytí navigace, která je bezpředmětná na této stránce pro mobilních zařízení.",
-      "Neměl jsem nechat AI rozházet celý můj projekt, nebo spíš slepě důvěřovat. Rozhodl jsem se při seknutí s nastavením druhého jazyka pro využití jeho pomoci a poté jsem dlouhou dobu opravoval celý projekt. >> Na části a jednoduchý kód je skvělý, na větší kousky nebo těžší úkoly ne. Stále si ale myslím, že je to skvělý nástroj v moment, kdy se na delší dobu zaseknete. Pokud se používá správně, dokáže vás líp zorientovat a vysvětlit postup/řešení. Díky tomu je učení mnohem efektivnější."
+      "Umělou inteligenci používám ve svém procesu učení a rozvoje jako nástroj, který urychluje můj růst a pomáhá mi efektivněji řešit problémy. Ačkoli je skvělá pro generování malých úryvků kódu nebo poskytování vysvětlení, naučil jsem se jí slepě nedůvěřovat u rozsáhlých a komplexních úkolů. Přijímám plnou odpovědnost za kód v tomto portfoliu a ujišťuji se, že každá řádka byla mnou pochopena, odladěna a bude případně vysvětlena. Pokud počáteční výstup AI nebyl správný, ujistil jsem se, že ho opravím a plně mu porozumím, přičemž tuto zkušenost využívám jako příležitost k učení a objevování lepších a správných postupů."
       ],
       en: [
       "The start of the project was chaotic - mainly with configuring Tailwind. It was hard to figure out why some classes weren't working. I eventually discovered it was due to tree-shaking and had to safelist them or hardcode test cases.",
@@ -65,7 +68,7 @@ const projectData = {
       "I decided to place all content on the main page while still keeping navigation to other pages. Some people prefer focusing on one topic per page, others like having everything in one place they can scroll through.",
       "Originally, I didn't plan to add tech-based filtering for projects, but the idea came mid-way - and I think it greatly improves UX moving forward.",
       "Full responsiveness was added late > after the 'final' version I realized the navigation and projects didn't work well on mobile. Fixed later by hiding navigation elements that are irrelevant for this page on mobile devices.",
-      "I shouldn't have let AI corrupt my entire code, or rather, I shouldn't blindly trust it. I decided to use its help when I was stuck with setting up a second language, and then spent a long time fixing the entire project. >> It's great for little parts and simple code, but not for larger pieces or more difficult tasks. But I still think its great tool when you are stuck for a longer period of time, he can navigate and explain if used correctly. It makes it much more efficient to learn."
+      "I use AI in my learning and development workflow as a tool to accelerate my growth and solve problems more efficiently. While it's fantastic for generating small code snippets or providing explanations when I'm stuck, I've learned not to blindly trust it for large, complex tasks. I take full ownership of the code in this portfolio, ensuring that every line has been understood, debugged, and can be explained by me. If the AI's initial output wasn't right, I made sure to fix and fully comprehend it, using the experience as a chance to learn and explore better practices."
     ]
     },
     highlights: {
@@ -177,6 +180,7 @@ const projectData = {
       en: "A web-based tool that simulates early-stage threat analysis using simple logs."
     },
     github: "https://github.com/1Kishi/Mini-Network-Threat-Analyzer",
+    demo: "https://mini-network-threat-analyzer.vercel.app/",
     tech: ["React", "Tailwind", "JavaScript", "Network", "Cybersecurity", "LAN"],
     image: "/images/webbased_minithreat_analyzer-screenshot.png",
     goals: {
@@ -186,7 +190,7 @@ const projectData = {
         "Zvýraznit podezřelé spojení podle předdefinovaných pravidel (porty, externí IP, opakování).",
         "Zobrazit souhrn počtu a typů spojení a detekovaných problémů.",
         "Použít React a Tailwind pro responzivní, přehledné UI."
-          ],
+      ],
       en: [
         "Simulate the early stage of threat analysis using a simple tool.",
         "Visualize network connections between IP addresses, ports, and protocols.",
@@ -196,143 +200,436 @@ const projectData = {
       ]
     },
     challenges: {
-      cz: ["Opět jsem narazil na chybu s Tailwind CSS. Po 90 hodinách práce na webu jsem si už nepamatoval, jak jsem podobný problém řešil dříve. Tentokrát jsem ho vyřešil do 20 minut > upravil jsem package.json, downgradoval verzi Tailwindu a vše začalo fungovat. Zjistil jsem, o jaké změny tím přicházím, ale pro velikost a rozsah projektu to nebyl problém. Rozhodl jsem se pokračovat dál, protože stabilita a čas byly důležitější."],
-      en: ["I ran into a Tailwind CSS error again. After 90 hours of working on the site, I no longer remembered how I had solved a similar issue earlier. This time, I resolved it in 20 minutes > I edited the package.json, downgraded the Tailwind version, and everything started working. I looked into what features I'd be missing, but for the size and scope of the project, it wasn't an issue. I chose to continue because stability and time were more important."]
+      cz: [
+        "Opět jsem narazil na chybu s Tailwind CSS. Po 90 hodinách práce na webu jsem si už nepamatoval, jak jsem podobný problém řešil dříve. Tentokrát jsem ho vyřešil do 20 minut > upravil jsem package.json, downgradoval verzi Tailwindu a vše začalo fungovat. Zjistil jsem, o jaké změny tím přicházím, ale pro velikost a rozsah projektu to nebyl problém. Rozhodl jsem se pokračovat dál, protože stabilita a čas byly důležitější."
+      ],
+      en: [
+        "I ran into a Tailwind CSS error again. After 90 hours of working on the site, I no longer remembered how I had solved a similar issue earlier. This time, I resolved it in 20 minutes > I edited the package.json, downgraded the Tailwind version, and everything started working. I looked into what features I'd be missing, but for the size and scope of the project, it wasn't an issue. I chose to continue because stability and time were more important."
+      ]
     },
-          snippets: {
-        cz: [{ title: "...", code: "..." }],
-        en: [{ title: "...", code: "..." }]
+    caseStudy: {
+      first: {
+        images: [
+          "/images/Projects/MiniThreat/first-ui.png",
+          "/images/Projects/MiniThreat/first-ui-parsed.png"
+        ],
+        reasoning: {
+          cz: "Textarea → parse → tabulka. Cílem bylo rychle ověřit parsování a průtok dat ve formátu [čas] SRC DST PORT PROTO, bez UI složitostí.",
+          en: "Textarea → parse → table. Goal was to quickly prove parsing and data flow for the format [time] SRC DST PORT PROTO, without UI complexity."
+        },
+        snippets: [
+          {
+            title: { cz: "První verze: App", en: "First version: App" },
+            code: String.raw`import { useState } from "react"
+  import { parseLogData } from "./utils/parseLogs"
+
+  export default function App() {
+    const [logInput, setLogInput] = useState("")
+    const [parsedData, setParsedData] = useState([])
+
+    function handleParse() {
+      const result = parseLogData(logInput)
+      setParsedData(result)
+    }
+
+    return (
+      <div className="min-h-screen bg-gray-900 text-white p-6">
+        <h1 className="text-2xl font-bold mb-4">Mini Network Threat Analyzer</h1>
+        <textarea
+          value={logInput}
+          onChange={(e) => setLogInput(e.target.value)}
+          className="w-full h-48 p-3 bg-gray-800 border border-gray-700 rounded resize-none mb-4"
+          placeholder="Paste logs here..."
+        />
+        <button
+          onClick={handleParse}
+          className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded"
+        >
+          Analyze Logs
+        </button>
+        <div className="mt-6">
+          {parsedData.length > 0 && (
+            <table className="w-full text-sm border-collapse mt-4">
+              <thead>
+                <tr className="bg-gray-700">
+                  <th className="border px-2 py-1">Timestamp</th>
+                  <th className="border px-2 py-1">Source</th>
+                  <th className="border px-2 py-1">Destination</th>
+                  <th className="border px-2 py-1">Port</th>
+                  <th className="border px-2 py-1">Protocol</th>
+                </tr>
+              </thead>
+              <tbody>
+                {parsedData.map((entry, i) => (
+                  <tr key={i} className="even:bg-gray-800">
+                    <td className="border px-2 py-1">{entry.timestamp}</td>
+                    <td className="border px-2 py-1">{entry.src}</td>
+                    <td className="border px-2 py-1">{entry.dst}</td>
+                    <td className="border px-2 py-1">{entry.port}</td>
+                    <td className="border px-2 py-1">{entry.proto}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </div>
+    )
+  }`
+          },
+          {
+            title: { cz: "První verze: parseLogs", en: "First version: parseLogs" },
+            code: String.raw`export function parseLogData(logText) {
+    const lines = logText.split('\n').filter(Boolean)
+    return lines.map(line => {
+      const match = line.match(/\[(.*?)\] SRC:(.*?) DST:(.*?) PORT:(\d+) PROTO:(\w+)/)
+      if (!match) return null
+      return {
+        timestamp: match[1],
+        src: match[2],
+        dst: match[3],
+        port: match[4],
+        proto: match[5]
       }
+    }).filter(Boolean)
+  }`
+          }
+        ],
+        sampleInput: String.raw`
+        [2025-08-02 15:00:11] SRC:10.0.0.3 DST:8.8.8.8 PORT:443 PROTO:TCP
+        [2025-08-02 15:01:12] SRC:10.0.0.5 DST:192.168.0.1 PORT:22 PROTO:TCP`
+      },
+      finish: {
+        images: [
+          "/images/Projects/MiniThreat/final-scan.png",
+          "/images/Projects/MiniThreat/final-highlight.png"
+        ],
+      reasoning: {
+        cz: "Skórování je založené na službě (port+protokol), včetně rozsahů. Každá služba má základní váhu rizika, plus bod za externí cíl a bod za opakování. Z toho se odvodí závažnost a pro každý řádek se vypíše důvod (služba, externí cíl, opakování).",
+        en: "Scoring is service-based (port+protocol), including ranges. Each service has a base risk weight, plus one point for external destination and one for repetition. Severity is derived from the total, and each row shows a reason (service, external destination, repetition)."
+      },
+      snippets: [
+        {
+          title: { cz: "Skóre na základě služby", en: "Service-based scoring" },
+          code: String.raw`const SERVICE_RULES=[
+        {proto:"TCP",port:23,name:"Telnet",base:2},
+        {proto:"TCP",port:445,name:"SMB",base:2},
+        {proto:"TCP",port:22,name:"SSH",base:1},
+        {proto:"TCP",range:[5900,5999],name:"VNC",base:2},
+        {proto:"TCP",port:3389,name:"RDP",base:2},
+        {proto:"UDP",port:69,name:"TFTP",base:2}
+      ];
+
+      function findService(e){
+        const p=Number(e.port);
+        for(const r of SERVICE_RULES){
+          if(r.proto!==e.proto) continue;
+          if(r.port && r.port===p) return {name:r.name,base:r.base};
+          if(r.range && p>=r.range[0] && p<=r.range[1]) return {name:r.name,base:r.base};
+        }
+        return null;
+      }
+
+      function isPrivate(ip){ return /^(10\.|192\.168\.|172\.(1[6-9]|2\d|3[0-1])\.)/.test(ip); }
+      function toSeverity(s){ return s>=3?"high":s===2?"medium":"low"; }
+
+      function scoreEntry(e){
+        const svc=findService(e);
+        const external=!isPrivate(e.dst);
+        const repeated=(e.repeatCount||0)>=3;
+        let score=0;
+        if(svc) score+=svc.base;
+        if(external) score+=1;
+        if(repeated) score+=1;
+        return {score, severity:toSeverity(score), service:svc?svc.name:null, external, repeated};
+      }`
+        },
+        {
+          title: { cz: "Row flag reason", en: "Row flag reason" },
+          code: String.raw`function explain(e){
+        const s=scoreEntry(e);
+        const reasons=[];
+        if(s.service) reasons.push("risky_service:"+s.service);
+        if(s.external) reasons.push("external_dst");
+        if(s.repeated) reasons.push("repeated_access");
+        return reasons.join(", ");
+      }`
+        }
+      ]
+      }
+    }
   }
 };
+
+function CodeCollapse({ title, code, showText, hideText }) {
+    const [open, setOpen] = useState(false);
+    return (
+      <div className="rounded-xl border border-white/20 dark:border-white/10 overflow-hidden">
+        <button
+          onClick={()=>setOpen(v=>!v)}
+          className="w-full px-4 py-2 text-left bg-white/10 dark:bg-white/5 hover:bg-pink-500/20 transition"
+        >
+          {title} • {open ? hideText : showText}
+        </button>
+        {open && (
+          <pre className="bg-zinc-900 text-green-400 text-sm p-4 overflow-auto whitespace-pre-wrap leading-relaxed">
+            <code>{code}</code>
+          </pre>
+        )}
+      </div>
+    );
+ }
+
+
+
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const { lang, t } = useLanguage();
   const project = projectData[slug];
-  if (!project) return <p className="text-center mt-20">{t("project_not_found")}</p>;
+  const [lbOpen, setLbOpen] = useState(false);
+  const [lbSrc, setLbSrc] = useState("");
 
-  return (
-    <main className="min-h-screen px-6 py-16 text-black dark:text-white transition-colors duration-500">
-      <div className="max-w-4xl mx-auto space-y-10 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl px-8 py-12">
+  
+  if (project?.caseStudy) {
+    const cs = project.caseStudy;
+    return (
+      <main className="min-h-screen px-6 py-16 text-black dark:text-white transition-colors duration-500">
+        <div className="max-w-4xl mx-auto space-y-10 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl px-8 py-12">
+          <h1 className="text-3xl font-bold text-center">{project.title[lang]}</h1>
+          <p className="text-neutral-800 dark:text-neutral-300 text-center max-w-xl mx-auto">{project.description[lang]}</p>
 
-        <h1 className="text-3xl font-bold text-center">{project.title[lang]}</h1>
-        <p className="text-neutral-800 dark:text-neutral-300 text-center max-w-xl mx-auto">
-          {project.description[lang]}
-        </p>
+          {project.image && (
+            <div className="max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg border border-white/20 dark:border-white/10">
+              <img src={project.image} alt={project.title[lang]} className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" />
+            </div>
+          )}
 
-        {project.image && (
-          <div className="max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg border border-white/20 dark:border-white/10">
-            <img
-              src={project.image}
-              alt={project.title[lang]}
-              className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
-            />
+          <div className="flex flex-wrap justify-center gap-3">
+            {project.tech.map(tag=>(
+              <span key={tag} className="px-3 py-1 bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-full text-sm">{tag}</span>
+            ))}
           </div>
-        )}
 
-        <div className="flex flex-wrap justify-center gap-3">
-          {project.tech.map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-full text-sm">
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_goals")}</h2>
-          <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
-            {project.goals[lang].map((goal, i) => (
-              <li key={i}>{goal}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_challenges")}</h2>
-          <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
-            {project.challenges[lang].map((ch, i) => (
-              <li key={i}>{ch}</li>
-            ))}
-          </ul>
-        </div>
-          <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_photos_title")}</h2>
-        {project.extraImages && project.extraImages.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2 mt-8">
-            {project.extraImages.map((img, index) => (
-              <div key={index} className="rounded-xl overflow-hidden shadow-md border border-white/20 dark:border-white/10">
-                <img
-                  src={img}
-                  alt={`Screenshot ${index + 1}`}
-                  className="w-full h-auto object-cover"
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">{t('first_steps')}</h2>
+            <div className="group grid gap-6 md:grid-cols-2">
+              {cs.first.images.map((src,i)=>(
+                <button
+                  type="button"
+                  key={i}
+                  onClick={()=>{ setLbSrc(src); setLbOpen(true); }}
+                  className="overflow-hidden rounded-2xl ring-1 ring-white/20 dark:ring-white/10 transition group-hover:opacity-40 hover:!opacity-100 hover:ring-pink-500/50"
+                  aria-label={t('view_full') || 'View full'}
+                >
+                  <img src={src} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+            <h3 className="text-xl font-medium">{t('reasoning')}</h3>
+            <p className="text-neutral-800 dark:text-neutral-300">{cs.first.reasoning[lang]}</p>
+            <h3 className="text-xl font-medium">{t('snippets')}</h3>
+            <div className="space-y-3">
+              {cs.first.snippets.map((s,idx)=>(
+                <CodeCollapse
+                  key={idx}
+                  title={s.title[lang]}
+                  code={s.code}
+                  showText={t('show_code')}
+                  hideText={t('hide_code')}
                 />
-                {project.imageCaptions && project.imageCaptions[lang] && project.imageCaptions[lang][index] && (
-                  <p className="px-4 py-2 text-sm text-neutral-700 dark:text-neutral-300">
-                    {project.imageCaptions[lang][index]}
-                  </p>
-                )}
+              ))}
+            </div>
+            {cs.first.sampleInput && (
+              <div className="mt-4 rounded-xl border border-white/20 dark:border-white/10 overflow-hidden">
+                <div className="px-4 py-2 text-sm bg-white/10 dark:bg-white/5">Sample input</div>
+                <pre className="bg-zinc-900 text-zinc-100 text-sm p-4 overflow-auto whitespace-pre leading-relaxed">
+                  <code>{cs.first.sampleInput}</code>
+                </pre>
               </div>
+            )}
+          </section>
+
+          <section className="space-y-4">
+            <h2 className="text-2xl font-semibold">{t('finishing')}</h2>
+            <div className="group grid gap-6 md:grid-cols-2">
+              {cs.finish.images.map((src,i)=>(
+                <button
+                  type="button"
+                  key={i}
+                  onClick={()=>{ setLbSrc(src); setLbOpen(true); }}
+                  className="overflow-hidden rounded-2xl ring-1 ring-white/20 dark:ring-white/10 transition group-hover:opacity-40 hover:!opacity-100 hover:ring-pink-500/50"
+                  aria-label={t('view_full') || 'View full'}
+                >
+                  <img src={src} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+            <h3 className="text-xl font-medium">{t('reasoning')}</h3>
+            <p className="text-neutral-800 dark:text-neutral-300">{cs.finish.reasoning[lang]}</p>
+            <h3 className="text-xl font-medium">{t('snippets')}</h3>
+            <div className="space-y-3">
+              {cs.finish.snippets.map((s,idx)=>(
+                <CodeCollapse
+                  key={idx}
+                  title={s.title[lang]}
+                  code={s.code}
+                  showText={t('show_code')}
+                  hideText={t('hide_code')}
+                />
+              ))}
+            </div>
+          </section>
+
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold">{t("project_challenges")}</h2>
+            <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
+              {project.challenges[lang].map((ch,i)=>(<li key={i}>{ch}</li>))}
+            </ul>
+          </div>
+
+          <div className="flex flex-wrap gap-3 justify-center pt-2">
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition">{t("project_github")}</a>
+            {project.demo && (
+              <a href={project.demo} target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2 rounded-md bg-white/10 dark:bg-white/5 border border-white/30 dark:border-white/10 text-neutral-800 dark:text-neutral-100 hover:bg-pink-500/20 transition">{t("view_demo")}</a>
+            )}
+          </div>
+        </div>
+
+        <Lightbox
+          open={lbOpen}
+          src={lbSrc}
+          alt=""
+          onClose={()=>setLbOpen(false)}
+          closeLabel={t('close') || 'Close'}
+        />
+      </main>
+    );
+  }
+
+
+  if (!project) return <p className="text-center mt-20">{t("project_not_found")}</p>;
+    return (
+      <main className="min-h-screen px-6 py-16 text-black dark:text-white transition-colors duration-500">
+        <div className="max-w-4xl mx-auto space-y-10 rounded-2xl bg-white/10 dark:bg-white/5 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-xl px-8 py-12">
+
+          <h1 className="text-3xl font-bold text-center">{project.title[lang]}</h1>
+          <p className="text-neutral-800 dark:text-neutral-300 text-center max-w-xl mx-auto">
+            {project.description[lang]}
+          </p>
+
+          {project.image && (
+            <div className="max-w-3xl mx-auto overflow-hidden rounded-xl shadow-lg border border-white/20 dark:border-white/10">
+              <img
+                src={project.image}
+                alt={project.title[lang]}
+                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+          )}
+
+          <div className="flex flex-wrap justify-center gap-3">
+            {project.tech.map((tag) => (
+              <span key={tag} className="px-3 py-1 bg-white/20 dark:bg-white/10 border border-white/30 dark:border-white/10 rounded-full text-sm">
+                {tag}
+              </span>
             ))}
           </div>
-        )}
 
-        {project.PhotosAdditionalInfo && project.PhotosAdditionalInfo[lang] && (
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
-              {t("project_photos_info") ?? "Notes About Images"}
-            </h2>
+            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_goals")}</h2>
             <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
-              {project.PhotosAdditionalInfo[lang].map((note, i) => (
-                <p key={i}>{note}</p>
+              {project.goals[lang].map((goal, i) => (
+                <li key={i}>{goal}</li>
               ))}
             </ul>
           </div>
-        )}
 
-        {project.reflection && (
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_reflection")}</h2>
+            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_challenges")}</h2>
             <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
-              {project.reflection[lang].map((r, i) => <li key={i}>{r}</li>)}
+              {project.challenges[lang].map((ch, i) => (
+                <li key={i}>{ch}</li>
+              ))}
             </ul>
           </div>
-        )}
+            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_photos_title")}</h2>
+          {project.extraImages && project.extraImages.length > 0 && (
+            <div className="grid gap-6 sm:grid-cols-2 mt-8">
+              {project.extraImages.map((img, index) => (
+                <div key={index} className="rounded-xl overflow-hidden shadow-md border border-white/20 dark:border-white/10">
+                  <img
+                    src={img}
+                    alt={`Screenshot ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                  />
+                  {project.imageCaptions && project.imageCaptions[lang] && project.imageCaptions[lang][index] && (
+                    <p className="px-4 py-2 text-sm text-neutral-700 dark:text-neutral-300">
+                      {project.imageCaptions[lang][index]}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
 
-        {project.highlights && (
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_highlights")}</h2>
-            <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
-              {project.highlights[lang].map((h, i) => <li key={i}>{h}</li>)}
-            </ul>
+          {project.PhotosAdditionalInfo && project.PhotosAdditionalInfo[lang] && (
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">
+                {t("project_photos_info") ?? "Notes About Images"}
+              </h2>
+              <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
+                {project.PhotosAdditionalInfo[lang].map((note, i) => (
+                  <p key={i}>{note}</p>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {project.reflection && (
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_reflection")}</h2>
+              <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
+                {project.reflection[lang].map((r, i) => <li key={i}>{r}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {project.highlights && (
+            <div className="space-y-4">
+              <h2 className="text-xl font-semibold text-neutral-900 dark:text-white">{t("project_highlights")}</h2>
+              <ul className="list-disc list-inside text-neutral-800 dark:text-neutral-300 space-y-1">
+                {project.highlights[lang].map((h, i) => <li key={i}>{h}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {project.snippets && project.snippets.length > 0 && (
+            <>
+              <h1 className="text-xl font-semibold text-[26px] text-neutral-900 dark:text-white">{t("project_snippets")}</h1>
+              {project.snippets.map((snippet, idx) => (
+                <div key={idx} className="mt-8">
+                  <h3 className="text-lg font-semibold text-[15px] text-neutral-900 dark:text-white mb-2">
+                    {snippet.title[lang]}
+                  </h3>
+                  <pre className="bg-zinc-900 text-green-400 text-sm p-4 rounded-xl overflow-auto whitespace-pre-wrap leading-relaxed">
+                    <code>{snippet.code}</code>
+                  </pre>
+                </div>
+              ))}
+            </>
+          )}
+
+          <div className="text-center pt-4">
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition">
+              {t("project_github")}
+            </a>
           </div>
-        )}
-
-        {project.snippets && project.snippets.length > 0 && (
-          <>
-            <h1 className="text-xl font-semibold text-[26px] text-neutral-900 dark:text-white">{t("project_snippets")}</h1>
-            {project.snippets.map((snippet, idx) => (
-              <div key={idx} className="mt-8">
-                <h3 className="text-lg font-semibold text-[15px] text-neutral-900 dark:text-white mb-2">
-                  {snippet.title[lang]}
-                </h3>
-                <pre className="bg-zinc-900 text-green-400 text-sm p-4 rounded-xl overflow-auto whitespace-pre-wrap leading-relaxed">
-                  <code>{snippet.code}</code>
-                </pre>
-              </div>
-            ))}
-          </>
-        )}
-
-        <div className="text-center pt-4">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-5 py-2 rounded-md bg-pink-600 hover:bg-pink-700 text-white transition">
-            {t("project_github")}
-          </a>
         </div>
-      </div>
-    </main>
-  );
+      </main>
+    );
 }
