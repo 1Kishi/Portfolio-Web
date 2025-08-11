@@ -23,7 +23,7 @@ const projects = [
       en: "A web-based tool that simulates early-stage threat analysis using simple logs."
     },
     tech: ["React", "Tailwind","JavaScript", "Network", "LAN", "Cybersecurity"],
-    image: "/images/threat-analyzer-preview.png"
+    image: "/images/webbased_minithreat_analyzer-screenshot.png",
   }
 ];
 
