@@ -11,8 +11,8 @@ export default function Home() {
   const { t, lang } = useLanguage();
 
   const statusMessages = lang === 'cz'
-    ? ['Scháním spolupráci', 'Remote vítán']
-    : ['Looking for opportunities', 'Remote welcome'];
+    ? ['Sháním spolupráci']
+    : ['Looking for opportunities'];
 
   const [statusIndex, setStatusIndex] = useState(0);
   const [copied, setCopied] = useState(false);

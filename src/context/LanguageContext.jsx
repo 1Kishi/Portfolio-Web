@@ -105,7 +105,7 @@ const translations = {
     nav_portfolio: "Portfolio",
     work_title: "Work Experience",
     work_position: "Software & VR Tester",
-    work_place: "Virtual Lab • August 2023 - Present",
+    work_place: "Virtual Lab • August 2024 - Present",
     work_line1: "In this role, I test VR and software projects not only for functionality but also for UX. I create changelogs and communicate with clients (emails, feedback).",
     work_line2: "I help fix minor bugs in C# and handle post-processing of voice tracks in Audacity using AI tools to improve quality and naturalness.",
     work_line3: "I currently lead two part-time testers, but I still handle the vast majority of tasks myself.",
